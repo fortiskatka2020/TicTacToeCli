@@ -20,11 +20,6 @@ public class GameRunnerImpl implements GameRunner{
     }
 
     @Override
-    public Board getBoard() {
-        return board;
-    }
-
-    @Override
     public Symbol getCurrentSymbol() {
         return currentSymbol;
     }

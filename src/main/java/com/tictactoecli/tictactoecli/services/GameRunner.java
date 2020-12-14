@@ -7,7 +7,6 @@ import com.tictactoecli.tictactoecli.model.Symbol;
 
 public interface GameRunner {
 
-    Board getBoard();
 
     Symbol getCurrentSymbol();
 

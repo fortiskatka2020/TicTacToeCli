@@ -113,8 +113,7 @@ public class Board {
      * @return A boolean indicating if the most recently played symbol completed a full column of that symbol.
      */
     private boolean finishedColumn(Symbol value, int column){
-        boolean result = IntStream.range(0, size).noneMatch(rowIndex -> grid.get(rowIndex).get(column) != value);
-        return result;
+        return IntStream.range(0, size).noneMatch(rowIndex -> grid.get(rowIndex).get(column) != value);
     }
 
     /**
@@ -124,8 +123,7 @@ public class Board {
      * @return A boolean indicating wether or not the board is a draw in the current state.
      */
     public boolean isDraw() {
-        boolean noEmptyFields = grid.stream().flatMap(List::stream).noneMatch(x -> x == Symbol.BLANK);
-        return noEmptyFields;
+        return grid.stream().flatMap(List::stream).noneMatch(x -> x == Symbol.BLANK);
     }
 
     /**
